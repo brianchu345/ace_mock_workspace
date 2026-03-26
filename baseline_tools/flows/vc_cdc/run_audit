@@ -1,0 +1,3 @@
+$PSG_FE_CHECKER_UTILITIES_HOME/bin/check_sip_vccdc_abstract.py,$DUT,$RUN_SETTINGS_FILE
+$PSG_FE_CHECKER_UTILITIES_HOME/bin/vc_cdc_synchronizer_audit.pl,$WORKAREA/output/$DUT/vc_cdc/$PASS/vc_cdc_run/cdc/reports/cdc_detailed_report_include_waived.rpt,$TOP_MODULE_NAME,$TOP_MODULE_NAME                       
+$PSG_FE_CHECKER_UTILITIES_HOME/bin/gen_vccdc_audit.py,$TOP_IP_NAME,$DUT,$TOP_MODULE_NAME,$PASS

@@ -1,0 +1,138 @@
+{
+    "top": "bypass_pnr_reg_fp",
+    "ipDetails": {
+        "altr_pkg": {
+            "version": "$ALTR_PKG_TAG",
+            "overrideLib": "altr_pkg_lib",
+            "ipType": "hip",
+            "altr_pkg_lib": {
+                "sv": {
+                    "filelist_reference": {
+                        "sim_filelist": [
+                            "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/subip/hip/altr_pkg/filelists/rtl.f"
+                        ],
+                        "sim_opts": [
+                            ""
+                        ]
+                    },
+                    "filelist_resolved": {
+                        "sim_filelist": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/altr_pkg/altr_pkg.sv.sim.f",
+                        "sim_opts": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/altr_pkg/altr_pkg.sv.sim.opts.f"
+                    }
+                }
+            },
+            "libOrderList": [
+                "altr_pkg:altr_pkg_lib"
+            ]
+        },
+        "km_axi4lite_common_pkg": {
+            "version": "$KM_AXI4LITE_COMMON_PKG_TAG",
+            "overrideLib": "km_axi4lite_common_pkg_lib",
+            "ipType": "hip",
+            "km_axi4lite_common_pkg_lib": {
+                "sv": {
+                    "filelist_reference": {
+                        "sim_filelist": [
+                            "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/subip/hip/km_axi4lite_common_pkg/filelists/km_axi4lite_common_pkg.rtl.f"
+                        ],
+                        "sim_opts": [
+                            ""
+                        ]
+                    },
+                    "filelist_resolved": {
+                        "sim_filelist": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/km_axi4lite_common_pkg/km_axi4lite_common_pkg.sv.sim.f",
+                        "sim_opts": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/km_axi4lite_common_pkg/km_axi4lite_common_pkg.sv.sim.opts.f"
+                    }
+                }
+            },
+            "libOrderList": [
+                "km_axi4lite_common_pkg:km_axi4lite_common_pkg_lib"
+            ]
+        },
+        "TS1N03PHSLVTA1024X40M4WBZHODCP": {
+            "version": "$PROJ_ARCHIVE/arc/TS1N03PHSLVTA1024X40M4WBZHODCP/ip_handoff/$MEMORY_HIP_TAG/fe",
+            "overrideLib": "TS1N03PHSLVTA1024X40M4WBZHODCP_lib",
+            "ipType": "hip",
+            "hipSearchPath": "$PROJ_ARCHIVE/arc/TS1N03PHSLVTA1024X40M4WBZHODCP/ip_handoff/$MEMORY_HIP_TAG/fe/CCS:$PROJ_ARCHIVE/arc/TS1N03PHSLVTA1024X40M4WBZHODCP/ip_handoff/$MEMORY_HIP_TAG/be/OASIS:$PROJ_ARCHIVE/arc/TS1N03PHSLVTA1024X40M4WBZHODCP/ip_handoff/$MEMORY_HIP_TAG/be/NDM",
+            "TS1N03PHSLVTA1024X40M4WBZHODCP_lib": {
+                "sv": {
+                    "filelist_reference": {
+                        "sim_filelist": [
+                            "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/subip/hip/TS1N03PHSLVTA1024X40M4WBZHODCP/filelists/rtl.f"
+                        ],
+                        "sim_opts": [
+                            ""
+                        ]
+                    },
+                    "filelist_resolved": {
+                        "sim_filelist": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/TS1N03PHSLVTA1024X40M4WBZHODCP/TS1N03PHSLVTA1024X40M4WBZHODCP.sv.sim.f",
+                        "sim_opts": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/TS1N03PHSLVTA1024X40M4WBZHODCP/TS1N03PHSLVTA1024X40M4WBZHODCP.sv.sim.opts.f"
+                    }
+                }
+            },
+            "libOrderList": [
+                "TS1N03PHSLVTA1024X40M4WBZHODCP:TS1N03PHSLVTA1024X40M4WBZHODCP_lib"
+            ]
+        },
+        "ctech": {
+            "version": "$CTECH_TAG",
+            "overrideLib": "ctech_lib",
+            "ipType": "sip",
+            "ctech_lib": {
+                "sv": {
+                    "filelist_reference": {
+                        "sim_filelist": [
+                            "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/subip/sip/ctech/filelists/rtl.f"
+                        ],
+                        "sim_opts": [
+                            ""
+                        ]
+                    },
+                    "filelist_resolved": {
+                        "sim_filelist": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/ctech/ctech.sv.sim.f",
+                        "sim_opts": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/ctech/ctech.sv.sim.opts.f"
+                    }
+                }
+            },
+            "libOrderList": [
+                "ctech:ctech_lib"
+            ]
+        },
+        "bypass_pnr_reg_fp": {
+            "version": "",
+            "overrideLib": "bypass_pnr_reg_fp_lib",
+            "ipType": "top",
+            "designOpts": {
+                "sv": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/bypass_pnr_reg_fp/bypass_pnr_reg_fp.sv.design_opts.f"
+            },
+            "bypass_pnr_reg_fp_lib": {
+                "sv": {
+                    "filelist_reference": {
+                        "sim_filelist": [
+                            "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/filelists/bypass_pnr_reg_fp.rtl.f"
+                        ],
+                        "sim_opts": [
+                            "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/filelists/rtl_opts.f"
+                        ]
+                    },
+                    "filelist_resolved": {
+                        "sim_filelist": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/bypass_pnr_reg_fp/bypass_pnr_reg_fp.sv.sim.f",
+                        "sim_opts": "/nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/playground/demo_bypass_pnr_reg/output/bypass_pnr_reg_fp/genfilelist/ip/bypass_pnr_reg_fp/bypass_pnr_reg_fp.sv.sim.opts.f"
+                    }
+                }
+            },
+            "libOrderList": [
+                "altr_pkg:altr_pkg_lib",
+                "km_axi4lite_common_pkg:km_axi4lite_common_pkg_lib",
+                "bypass_pnr_reg_fp:bypass_pnr_reg_fp_lib"
+            ]
+        }
+    },
+    "ipOrderList": [
+        "altr_pkg",
+        "km_axi4lite_common_pkg",
+        "TS1N03PHSLVTA1024X40M4WBZHODCP",
+        "ctech",
+        "bypass_pnr_reg_fp"
+    ]
+}
