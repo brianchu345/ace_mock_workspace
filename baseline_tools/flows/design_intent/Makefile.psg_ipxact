@@ -1,0 +1,46 @@
+# makefile for ipxact flows
+
+ifndef CELLS 
+  $(warning setting CELLS is required for this flow)
+endif
+
+help:
+	@echo gmake targets for ipxact.  Passing CELLS is required for all targets 
+	@echo   gen_regis_rdl CELLS=abc           -- description
+	@echo   run_ipxact2doc CELLS=abc          -- description
+	@echo   run_ipxact2os CELLS=abc           -- description
+	@echo   run_ipxact_bcmrbc_check CELLS=abc -- description
+	@echo   run_ipxact_check CELLS=abc        -- description
+	@echo   run_ipxact_rtl_check CELLS=abc    -- description
+	@echo   run_os2ipxact CELLS=abc           -- description
+	@echo   run_rdl2ipxact CELLS=abc          -- description
+	@echo   clean  -- cleans outputs
+
+gen_regis_rdl:
+	cth_wrap_di gen_regis_rdl --cells $(CELLS)
+
+run_ipxact2doc:
+	cth_wrap_di run_ipxact2doc --cells $(CELLS)
+
+run_ipxact2os:
+	cth_wrap_di run_ipxact2os --cells $(CELLS)
+
+run_ipxact_bcmrbc_check:
+	cth_wrap_di run_ipxact_bcmrbc_check --cells $(CELLS)
+
+run_ipxact_check:
+	cth_wrap_di run_ipxact_check --cells $(CELLS)
+
+run_ipxact_rtl_check:
+	cth_wrap_di run_ipxact_rtl_check --cells $(CELLS)
+
+run_os2ipxact:
+	cth_wrap_di run_os2ipxact --cells $(CELLS)
+
+run_rdl2ipxact:
+	cth_wrap_di run_rdl2ipxact --cells $(CELLS)
+
+
+clean:
+	@echo replace this with clean rule
+

@@ -1,0 +1,16 @@
+# makefile for swfrontcheck flow
+ifndef CELLS 
+  $(warning setting CELLS is required for this flow)
+endif
+
+help:
+	@echo gmake targets for swfrontcheck.  Passing CELLS is required for all targets 
+	@echo    run_udm_swfrontcheck CELLS=abc         -- description
+	@echo    clean  -- cleans outputs
+
+run_udm_swfrontcheck:
+	cth_wrap_di run_udm_swfrontcheck --cells $(CELLS)
+
+clean:
+	@echo replace this with clean rule
+

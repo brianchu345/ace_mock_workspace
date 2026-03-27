@@ -117,7 +117,7 @@ output/<dut>/vcs_<step>/<dut>_vcs_<step>.log
 
 ## What Not To Do
 
-- Do not add `+define+` macros directly to a flow cfg — use the ip_type param files under `baseline_tools/global_config/ip_type_params/`.
+- Do not add `+define+` macros directly to a flow cfg  — use the ip_type param files under `baseline_tools/global_config/ if exis underip_type_params/`. If not define it as a param, then use it.
 - Do not hardcode absolute paths in `baseline_tools/` files — use `$WORKAREA`, `envs()`, or `params()` references.
 - Do not include a tool cfg from inside a flow cfg or vice versa.
 - Do not edit `baseline_tools/` to work around a single-design issue; use `user_override/` instead.

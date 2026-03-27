@@ -1,0 +1,16 @@
+# makefile for miscmod flow
+ifndef CELLS 
+  $(warning setting CELLS is required for this flow)
+endif
+
+help:
+	@echo gmake targets for miscmod.  Passing CELLS is required for all targets 
+	@echo    gen_bcm_cdc_rtl CELLS=abc                   -- generate bcm compatible CDC model
+	@echo    clean  -- cleans outputs
+
+gen_bcm_cdc_rtl:
+	cth_wrap_di gen_bcm_cdc_rtl --cells $(CELLS)
+
+clean:
+	@echo replace this with clean rule
+

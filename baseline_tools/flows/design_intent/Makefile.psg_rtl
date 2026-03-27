@@ -1,0 +1,39 @@
+# makefile for bcmrbc flow
+ifndef CELLS 
+  $(warning setting CELLS is required for this flow)
+endif
+
+help:
+	@echo gmake targets for rtl.  Passing CELLS is required for all targets 
+	@echo    gen_pdim_files CELLS=abc                    -- generate pdim files
+	@echo    run_ipxact2rtl CELLS=abc                    -- description
+	@echo    run_model_function_quartus_check CELLS=abc  -- description
+	@echo    clean  -- cleans outputs
+
+gen_pdim_files:
+	cth_wrap_di gen_pdim_files --cells $(CELLS)
+
+run_ipxact2rtl:
+	cth_wrap_di run_ipxact2rtl --cells $(CELLS)
+
+run_model_function_quartus_check:
+	cth_wrap_di run_model_function_quartus_check --cells $(CELLS)
+
+run_constrains_pwr_model_check:
+	cth_wrap_di run_constrains_pwr_model_check --cells $(CELLS)
+
+run_rtl_quartus_check:
+	cth_wrap_di run_rtl_quartus_check --cells $(CELLS)
+
+run_dv_quartus_check:
+	cth_wrap_di run_dv_quartus_check --cells $(CELLS)
+
+run_dr_slice_check:
+	cth_wrap_di run_dr_slice_check --cells $(CELLS)
+
+run_static_en_check:
+	cth_wrap_di run_static_en_check --cells $(CELLS)
+
+clean:
+	@echo replace this with clean rule
+

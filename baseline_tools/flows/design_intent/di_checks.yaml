@@ -1,0 +1,33 @@
+# di checks  used by iflow_mako's di template
+psg_bcmrbc:
+ - run_bcmrbc_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_ipxact2bcm: ['MANUAL']
+ - run_rtl_bcmrbc_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_udm_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_pydi_checks: ['TURNIN','RELEASE','MOCK' ]
+
+psg_swfrontcheck:
+ - run_udm_swfrontcheck: ['TURNIN','RELEASE','MOCK' ]
+
+psg_ipxact:
+ - gen_regis_rdl: ['MANUAL']
+ - run_ipxact2doc: ['MANUAL']
+ - run_ipxact2os: ['MANUAL']
+ - run_ipxact_bcmrbc_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_ipxact_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_ipxact_rtl_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_os2ipxact:  ['MANUAL']
+ - run_rdl2ipxact: ['MANUAL']
+
+psg_rtl:
+ - gen_pdim_files: ['MANUAL']
+ - run_ipxact2rtl: ['MANUAL']
+ - run_model_function_quartus_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_rtl_quartus_check: ['TURNIN','RELEASE','MOCK' ]
+ - run_dv_quartus_check: ['MANUAL']
+ - run_constrains_pwr_model_check: ['MANUAL']
+ - run_dr_slice_check: ['MANUAL']
+ - run_static_en_check: ['MANUAL']
+
+psg_miscmod/cdc:
+ - gen_bcm_cdc_rtl: ['TURNIN','RELEASE','MOCK' ]

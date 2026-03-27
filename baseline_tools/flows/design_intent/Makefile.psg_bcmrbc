@@ -1,0 +1,32 @@
+# makefile for bcmrbc flow
+ifndef CELLS 
+  $(warning setting CELLS is required for this flow)
+endif
+
+help:
+	@echo gmake targets for bcmrbc.  Passing CELLS is required for all targets 
+	@echo    run_bcmrbc_check CELLS=abc     -- description
+	@echo    run_ipxact2bcm CELLS=abc       -- description
+	@echo    run_rtl_bcmrbc_check CELLS=abc -- description
+	@echo    run_udm_check CELLS=abc         -- description
+	@echo    run_pydi_checks CELLS=abc         -- description
+	@echo    clean  -- cleans outputs
+
+run_bcmrbc_check:
+	cth_wrap_di run_bcmrbc_check --cells $(CELLS)
+
+run_ipxact2bcm:
+	cth_wrap_di run_ipxact2bcm --cells $(CELLS)
+
+run_rtl_bcmrbc_check:
+	cth_wrap_di run_rtl_bcmrbc_check --cells $(CELLS)
+
+run_udm_check:
+	cth_wrap_di run_udm_check --cells $(CELLS)
+
+run_pydi_checks:
+	cth_wrap_di run_pydi_checks --cells $(CELLS)
+
+clean:
+	@echo replace this with clean rule
+
