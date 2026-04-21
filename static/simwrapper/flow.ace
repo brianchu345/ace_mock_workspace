@@ -1,0 +1,16 @@
+# =============================================================================
+# flow.ace — simwrapper activity-specific overrides (static/simwrapper)
+# =============================================================================
+# This file includes the base flow.ace from toolbase/simwrapper/ and overrides
+# specific settings for demonstration purposes.
+# =============================================================================
+
+@include $WORKAREA/toolbase/simwrapper/flow.ace
+
+# -----------------------------------------------------------------------------
+# Activity-specific overrides (demonstration)
+# -----------------------------------------------------------------------------
+[simwrapper]
+
+# Future overrides can go here
+# Example: SKIP_SFDF = true

@@ -1,0 +1,21 @@
+# =============================================================================
+# flow.ace — Xcelium activity-specific overrides (static/xcelium)
+# =============================================================================
+# This file includes the base flow.ace from tools_demo/tool-xcelium/ and overrides
+# specific settings for demonstration purposes.
+# =============================================================================
+
+@include $ACE_TOOL_XCELIUM_HOME/flow.ace
+
+# -----------------------------------------------------------------------------
+# Activity-specific overrides (demonstration)
+# -----------------------------------------------------------------------------
+[xcelium]
+
+# Override error exclude patterns with dummy regex for demonstration
+# These patterns are meaningless and used only to show override behavior
+# Note: Keep the Cheetah-RTL pattern and add dummy ones
+ERROR_EXCLUDE = [VLGERR: An error occurred during parsing, bcd, efg, hij]
+
+# Override warning exclude patterns with dummy regex for demonstration
+WARNING_EXCLUDE = [klm, nop, qrs]

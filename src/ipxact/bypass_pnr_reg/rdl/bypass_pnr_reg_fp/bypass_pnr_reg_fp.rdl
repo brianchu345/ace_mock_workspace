@@ -1,0 +1,73 @@
+// This confidential and proprietary software may be used only as authorized by
+// a licensing agreement from INTEL
+// copyright notice must be reproduced on all authorized copies.
+//-----------------------------------------------------------------------------
+// Copyright (c) 2020 Intel Corporation. All rights reserved.  Altera products are
+// protected under numerous U.S. and foreign patents, maskwork rights, copyrights and
+// other intellectual property laws.
+//-----------------------------------------------------------------------------
+//  $Header: //depot/icd_cad/design_intent/rel/2.x/bin/roap2rdl.py#10 $
+//  $Date: 2024/06/28 $
+//  $Author: limyongs $
+//-----------------------------------------------------------------------------
+// Generation: /p/cth/cad/altera_design_intent/2.14/bin/roap2rdl --workbook bypass_pnr_reg_fp.reg.xlsm
+//-----------------------------------------------------------------------------
+// NOTE: psg_regis.rdl is no longer needed here because it is automatically included
+//       when rdl2ipxact is run.
+// `include "psg_regis.rdl"
+//
+
+addrmap bypass_pnr_reg_fp {
+
+    reg reg_cfg {
+        regwidth = 32 ;
+        accesswidth = 32 ;
+        desc = "csr_reg_desc" ;
+        field {
+            hw = r ;
+            sw = rw ;
+            fieldwidth = 1 ;
+            bcm_path = "cfg_bypass" ;
+            desc = "0: BYPASS  1: REG" ;
+            rtl_path = "cfg_bypass" ;
+        } bypass [0:0] ;
+        field {
+            hw = r ;
+            sw = rw ;
+            fieldwidth = 1 ;
+            bcm_path = "cfg_data_sel" ;
+            desc = "0: A  1: B" ;
+            rtl_path = "cfg_data_sel" ;
+        } data_sel [1:1] ;
+        field {
+            hw = r ;
+            sw = rw ;
+            fieldwidth = 2 ;
+            bcm_path = "cfg_clk_sel[1:0]" ;
+            desc = "00: CLK0  01: CLK1 10: CLK2 11: CLK3" ;
+            rtl_path = "cfg_clk_sel[1:0]" ;
+        } clk_sel [3:2] ;
+        field {
+            hw = r ;
+            sw = rw ;
+            fieldwidth = 2 ;
+            bcm_path = "cfg_voltage[1:0]" ;
+            rtl_path = "cfg_voltage[1:0]" ;
+        } voltage [5:4] ;
+        field {
+            hw = r ;
+            sw = rw ;
+            fieldwidth = 1 ;
+            bcm_path = "cfg_invert" ;
+            rtl_path = "cfg_invert" ;
+        } invert [6:6] ;
+    };
+
+
+
+    //=========================================================================
+    //Declare instances of all the registers and set their addresses
+    //=========================================================================
+
+    reg_cfg cfg @ 0x0 ;
+};

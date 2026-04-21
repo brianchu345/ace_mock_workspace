@@ -1,0 +1,20 @@
+# =============================================================================
+# flow.ace — UDM activity-specific overrides (static/udm)
+# =============================================================================
+# This file includes the base flow.ace from tools_demo/tool-udm_rtl_reader/ and overrides
+# specific settings for demonstration purposes.
+# =============================================================================
+
+@include $ACE_TOOL_VCS_HOME/flow.ace
+@include $ACE_TOOL_UDM_RTL_READER_HOME/flow.ace
+
+# -----------------------------------------------------------------------------
+# Activity-specific overrides (demonstration)
+# -----------------------------------------------------------------------------
+[vcs]
+
+# Override error exclude patterns with dummy regex for demonstration
+ERROR_EXCLUDE = [tuv, wxy, zab]
+
+# Override warning exclude patterns with dummy regex for demonstration
+WARNING_EXCLUDE = [cde, fgh, ijk]

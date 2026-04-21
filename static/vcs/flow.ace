@@ -1,0 +1,25 @@
+# =============================================================================
+# flow.ace — VCS activity-specific overrides (static/vcs)
+# =============================================================================
+# This file includes the base flow.ace from tools_demo/tool-vcs/ and overrides
+# specific settings for demonstration purposes.
+# =============================================================================
+
+@include $ACE_TOOL_VCS_HOME/flow.ace
+
+# =============================================================================
+# [vcs] — activity-specific overrides
+# Only set keys that differ from the toolbase baseline.
+# =============================================================================
+[vcs]
+
+# ---- Top compile library (optional override — mirrors Cheetah TOP_COMPILE_LIB) --
+# Leave empty (default) unless the top module lives in a non-default named library.
+# When set, elaboration becomes:  vcs -liblist_work <TOP_COMPILE_LIB>.<top>
+# When empty (default):           vcs -liblist_work <top>
+# ---------------------------------------------------------------------------------
+TOP_COMPILE_LIB =
+
+# ---- Log analysis pattern overrides (demonstration) ----
+ERROR_EXCLUDE = [abc, def, ghi]
+WARNING_EXCLUDE = [xyz, uvw, rst]

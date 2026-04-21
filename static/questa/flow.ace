@@ -1,0 +1,20 @@
+# =============================================================================
+# flow.ace — Questa activity-specific overrides (static/questa)
+# =============================================================================
+# This file includes the base flow.ace from tools_demo/tool-questa/ and overrides
+# specific settings for demonstration purposes.
+# =============================================================================
+
+@include $ACE_TOOL_QUESTA_HOME/flow.ace
+
+# -----------------------------------------------------------------------------
+# Activity-specific overrides (demonstration)
+# -----------------------------------------------------------------------------
+[questa]
+
+# Override error exclude patterns with dummy regex for demonstration
+# These patterns are meaningless and used only to show override behavior
+ERROR_EXCLUDE = [jkl, mno, pqr]
+
+# Override warning exclude patterns with dummy regex for demonstration
+WARNING_EXCLUDE = [stu, vwx, yza]

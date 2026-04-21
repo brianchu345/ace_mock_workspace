@@ -1,29 +1,54 @@
 # =============================================================================
 # Makefile — workspace entry point
 # =============================================================================
-# Assumes the user is already inside the ace environment (ace_shell entered).
+# After sourcing ace_setup, run any target as:
+#   make <dut>__<tool>_<step>
 #
-# Usage:
-#   make <dut>__vcs_compile
-#   make <dut>__vcs_elab
-#   make <dut>__vcs_all
+# The DUT name is extracted from the target and passed down to the flow.
 # =============================================================================
-
-WORKAREA ?= /nfs/site/disks/da_scratch_1/users/chubrian/chipstack_wkspace/ace_demo
-
-include $(WORKAREA)/baseline_tools/flows/vcs/vcs.Makefile
+include $(WORKAREA)/toolbase/design_fe.mk
 
 .PHONY: help
 help:
-	@echo "Usage: make <dut>__vcs_compile | <dut>__vcs_elab | <dut>__vcs_all"
 	@echo ""
-	@echo "  DUT is extracted from the target name and exported so that"
-	@echo "  vcs_flow.cfg resolves: [includes] ../../../cfg/\$$DUT.design.cfg"
+	@echo "Usage: make <dut>__<tool>_<step>"
 	@echo ""
-	@echo "  Flow cfg is auto-discovered:"
-	@echo "    1. \$$WORKAREA/user_override/vcs/vcs_flow_override.cfg  (if exists)"
-	@echo "    2. \$$WORKAREA/baseline_tools/flows/vcs/vcs_flow.cfg    (fallback)"
+	@echo "  VCS (compile + elaborate):"
+	@echo "    make <dut>__vcs_compile"
+	@echo "    make <dut>__vcs_elab"
+	@echo "    make <dut>__vcs_all"
+	@echo ""
+	@echo "  Questa:"
+	@echo "    make <dut>__questa_compile"
+	@echo "    make <dut>__questa_elab"
+	@echo "    make <dut>__questa_all"
+	@echo ""
+	@echo "  Xcelium:"
+	@echo "    make <dut>__xcelium_compile"
+	@echo "    make <dut>__xcelium_elab"
+	@echo "    make <dut>__xcelium_all"
+	@echo ""
+	@echo "  UDM RTL Reader (VCS compile + elab + UDM compile):"
+	@echo "    make <dut>__udm_vcs_compile"
+	@echo "    make <dut>__udm_vcs_elab"
+	@echo "    make <dut>__udm_udm_compile"
+	@echo "    make <dut>__udm_all"
+	@echo ""
+	@echo "  VC Lint:"
+	@echo "    make <dut>__vc_lint_compile"
+	@echo "    make <dut>__vc_lint_run"
+	@echo "    make <dut>__vc_lint_all"
+	@echo ""
+	@echo "  DI RDL-to-IPXACT:"
+	@echo "    make <dut>__rdl2ipxact"
+	@echo ""
+	@echo "  All flows (vcs + questa + xcelium + udm + rdl2ipxact):"
+	@echo "    make <dut>__all"
 	@echo ""
 	@echo "Examples:"
-	@echo "  make bypass_pnr_reg_fp__vcs_compile"
 	@echo "  make bypass_pnr_reg_fp__vcs_all"
+	@echo "  make bypass_pnr_reg_fp__rdl2ipxact"
+	@echo "  make bypass_pnr_reg_fp__all"
+	@echo ""
+
+include $(WORKAREA)/demo_tasks.mk

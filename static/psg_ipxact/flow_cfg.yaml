@@ -1,0 +1,9 @@
+# This part use to define IP and CELL names.
+# User can edit as needed.
+IP:
+  bypass_pnr_reg:
+    - bypass_pnr_reg_fp
+    - bypass_pnr_reg_sp
+
+
+

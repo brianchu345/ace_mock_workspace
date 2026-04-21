@@ -1,0 +1,4 @@
+# Sets up the FE tool environment and pulls in project-wide settings.
+
+@include toolbase/config_fe.ace
+@include projbase/project.ace
